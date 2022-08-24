@@ -1,0 +1,47 @@
+<mat-card class="card-form">
+    <mat-card-title class="cont-form-title">Vinculación de Cuentas</mat-card-title>
+    <mat-card-actions class="card-actions">
+        <table>
+            <tr class="card-actions-header">
+                <td>Numero de Cuenta</td>
+                <td>Tipo de Cuenta</td>
+                <td>Saldo</td>
+                <td></td>
+            </tr>
+            <tr class="card-actions-header">
+                <td colspan="4">
+                    <hr>
+                </td>
+            </tr>
+            <tr *ngFor="let op of cuentas">
+                <td>{{op.numerocuenta}}</td>
+                <td>{{op.tipocuenta}}</td>
+                <td>{{op.saldo}}</td>
+                <td>
+                    <button color="primary" class="mat-button" mat-raised-button [disabled]="!op.recurrente" value="op.recurrente" (click)="DeleteMapping(op)">
+                                Desasociar
+                    </button>
+                    <button color="primary" class="mat-button" mat-raised-button [disabled]="op.recurrente" value="op.recurrente" (click)="postMapping(op)">
+                                Vincular
+                      </button>
+                </td>
+            </tr>
+        </table>
+
+    </mat-card-actions>
+    <mat-card-actions class="card-actions">
+        <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <button class="login100-form-btn" (click)="navigateLocal()">Regresar comercio local</button>
+            </div>
+        </div>
+        <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <button class="login100-form-btn" (click)="navigateSandbox()">Regresar al comercio</button>
+            </div>
+        </div>
+    </mat-card-actions>
+
+</mat-card>

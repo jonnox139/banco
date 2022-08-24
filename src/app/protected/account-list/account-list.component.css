@@ -1,0 +1,92 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+}
+
+mat-card-title,
+mat-card-content {
+    display: flex;
+    justify-content: center;
+}
+
+.btnAcept {
+    background-color: lightseagreen;
+    color: white;
+}
+
+.card-actions {
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.cont-form-date {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #EBF5FF;
+    width: 100%;
+    text-align: left;
+}
+
+.cont-form-title {
+    width: 100%;
+    color: #031477;
+}
+
+.cont-form {
+    width: 100%;
+    text-align: left;
+    color: #031477;
+}
+
+.label-datos-title {
+    width: 350px;
+}
+
+.label-datos-1 {
+    width: 100%;
+    height: auto;
+    margin-left: 5%;
+}
+
+.label-datos-2 {
+    width: 100%;
+    text-align: right;
+    height: auto;
+}
+
+.card-form {
+    width: 70%;
+}
+
+table {
+    width: 100%;
+}
+
+.card-actions-header {
+    border-bottom: 1px solid black
+}
+
+.container-login100-form-btn {
+    margin: 5%;
+}
+
+.card-date {
+    background-color: #EBF5FF;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.radio-button {
+    margin-top: 5%;
+    width: 100%;
+    font-size: 15px;
+}

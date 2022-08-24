@@ -1,0 +1,35 @@
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('../../../../assets/images/bg-01.jpg');">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+            <div>
+                <div mat-dialog-content>
+                    <div style="display: flex;flex-direction: column; margin:1rem auto; max-width: 600px; padding: 1rem;">
+                        <div mat-dialog-content>
+                            <p>Ingresa el código enviado a tu celular <br> para autorizar el acceso a tu cuenta <br> y hacer la transaferencia</p>
+                        </div>
+                        <table>
+                            <td>
+                                <input [(ngModel)]="valor1" matInput #postalCode maxlength="1">
+                            </td>
+                            <td>
+                                <input [(ngModel)]="valor2" matInput #postalCode maxlength="1">
+                            </td>
+                            <td>
+                                <input [(ngModel)]="valor3" matInput #postalCode maxlength="1">
+                            </td>
+                            <td>
+                                <input [(ngModel)]="valor4" matInput #postalCode maxlength="1">
+                            </td>
+                        </table>
+                    </div>
+                </div>
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn" (click)="ConsumoTXDestino()">Validar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

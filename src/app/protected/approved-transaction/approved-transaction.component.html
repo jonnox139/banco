@@ -1,0 +1,52 @@
+<div class="limiter">
+  <div class="container-login100" style="background-image: url('../../../../assets/images/bg-01.jpg');">
+    <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+
+      <form class="login100-form" autocomplete="off">
+                <span class="login100-form-title p-b-49">
+                    Informacion de Dispersion
+                </span>
+        <mat-card-content class="cont-form">
+          <div layout="row" class="label-datos-1">
+            <div flex><label><b>CUS: {{ dataDispersion[0]?.dispersionId }} </b></label></div>
+          </div>
+          <div layout="row" class="label-datos-2">
+            <div flex><label></label></div>
+          </div>
+        </mat-card-content>
+
+        <br>
+
+        <mat-card-content class="cont-form">
+          <div layout="row" class="label-datos-1">
+            <div flex><label><b>Monto: {{ dataDispersion[0]?.totalAmount }}</b></label></div>
+          </div>
+          <div layout="row" class="label-datos-2">
+            <div flex><label></label></div>
+          </div>
+        </mat-card-content>
+
+        <br>
+
+        <mat-card-content class="cont-form">
+          <div layout="row" class="label-datos-1">
+            <div flex><label><b>Record totales: {{ dataDispersion[0]?.totalRecords }}</b></label></div>
+          </div>
+          <div layout="row" class="label-datos-2">
+            <div flex><label></label></div>
+          </div>
+        </mat-card-content>
+
+
+      </form>
+      <div class="container-login100-form-btn">
+        <div class="wrap-login100-form-btn">
+          <div class="login100-form-bgbtn"></div>
+          <button class="login100-form-btn" (click)="approvedDispersions()">
+            Aprobar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

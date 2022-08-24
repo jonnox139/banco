@@ -1,0 +1,18 @@
+.cont-form {
+  width: 100%;
+  text-align: left;
+  color: #031477;
+}
+
+.label-datos-1 {
+  display: block;
+  margin-left: 5%;
+  width: 50%;
+  height: auto;
+}
+
+.label-datos-2 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
