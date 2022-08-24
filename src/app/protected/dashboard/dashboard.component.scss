@@ -1,80 +1,91 @@
-:host {
-    display: flex;
-    justify-content: center;
-    margin: 100px 0px;
+/*:host {
+  justify-content: center;
 }
 
 mat-card-title,
 mat-card-content {
-    display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 
 .btnAcept {
-    background-color: lightseagreen;
-    color: white;
+  background-color: lightseagreen;
+  color: white;
 }
 
 .card-actions {
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .cont-form-date {
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #EBF5FF;
-    width: 100%;
-    text-align: left;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ebf5ff;
+  width: 100%;
+  text-align: left;
+}
+.cont-form-title {
+  width: 100%;
+  color: #031477;
+}
+
+.cont-form {
+  width: 100%;
+  text-align: left;
+  color: #031477;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.label-datos-1 {
+  width: 100%;
+  height: auto;
+}
+
+.card-date {
+  background-color: #ebf5ff;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.radio-button {
+  margin-top: 5%;
+  width: 100%;
+  font-size: 15px;
+}
+
+.mat-card-content div div {
+    margin: 0;
+}*/
+@media screen and (min-width:767px) {
+
+    ul {
+        -webkit-column-count: 3;
+        -webkit-column-gap: 20px;
+        -moz-column-count: 3;
+        -moz-column-gap: 20px;
+        column-count: 3;
+        column-gap: 20px;
+      }
+      
 }
 
 .cont-form-title {
     width: 100%;
     color: #031477;
-}
-
-.cont-form {
-    width: 100%;
-    text-align: left;
+  }
+  .cont-form {
+    text-align:center;
     color: #031477;
-}
-
-.label-datos-title {
-    width: 350px;
-}
-
-.label-datos-1 {
-    width: 100%;
-    height: auto;
-    margin-left: 5%;
-}
-
-.label-datos-2 {
-    width: 100%;
-    text-align: right;
-    height: auto;
-}
-
-.card-form {
-    width: 450px;
-}
-
-.card-date {
-    background-color: #EBF5FF;
-}
-
-.radio-group {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-}
-
-.radio-button {
-    margin-top: 5%;
-    width: 100%;
-    font-size: 15px;
-}
+  }

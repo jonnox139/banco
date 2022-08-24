@@ -4,20 +4,17 @@
   Logout
 </button>
 <mat-card class="card-form">
-    <mat-card-title class="cont-form-title">Información de Pago</mat-card-title>
-    <mat-card-actions class="card-actions">
-        <div flex>
-            <label><b
-          >Selecciona la cuenta origen para la transferencia</b
-        ></label
-      >
+  <mat-card-title class="cont-form-title">Información de Pago</mat-card-title>
+  <mat-card-actions class="card-actions">
+    <div flex>
+      <label><b>Selecciona la cuenta origen para la transferencia</b></label>
     </div>
   </mat-card-actions>
-  <mat-radio-group
+  <!--<mat-radio-group
     class="radio-group"
     name="opcionesCuentas"
     [(ngModel)]="operacionSeleccionada"
-    (change)="radioChange()"
+    (change)="radioChange($event)"
   >
     <mat-radio-button
       class="radio-button"
@@ -62,10 +59,52 @@
         </mat-card-content>
 </mat-card>
 </mat-radio-button>
-</mat-radio-group>
-<mat-card-actions class="card-actions">
-    <button color="primary" class="mat-button" mat-raised-button (click)="navAutorizacionTX()">
+</mat-radio-group>-->
+  <ul>
+    <li *ngFor="let op of cuentas">
+      <mat-checkbox
+        [(ngModel)]="op.selected"
+        (change)="toggleChecks($event)"
+        name="{{op.numerocuenta}}"
+        checked="{{op.selected}}"
+      >
+        <mat-card class="card-date">
+          <mat-card-content class="cont-form">
+            <div layout="row" class="label-datos-1">
+              <div flex>
+                <label
+                  >{{ op.tipocuenta }}</label
+                >
+              </div>
+            </div>
+            <div layout="row" class="label-datos-1">
+              <div flex>
+                <label>{{ op.numerocuenta | slice: -4 }}</label>
+              </div>
+            </div>
+            <div layout="row" class="label-datos-2">
+              <div flex>
+                <label>Saldo</label>
+              </div>
+            </div>
+            <div layout="row" class="label-datos-2">
+              <div flex>
+                <label>{{ op.saldo | currency }}</label>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </mat-checkbox>
+    </li>
+  </ul>
+  <mat-card-actions class="card-actions">
+    <button
+      color="primary"
+      class="mat-button"
+      mat-raised-button
+      (click)="navAutorizacionTX()"
+    >
       Siguiente
     </button>
-</mat-card-actions>
+  </mat-card-actions>
 </mat-card>
