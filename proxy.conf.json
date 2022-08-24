@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://20ea-179-51-125-40.ngrok.io/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
