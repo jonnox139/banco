@@ -1,0 +1,107 @@
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('../../../../assets/images/bg-01.jpg')">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+            <form class="login100-form" autocomplete="off">
+                <span class="login100-form-title p-b-49"> Información de Pago </span>
+
+                <mat-card-content class="cont-form-date">
+                    <div layout="row" class="label-datos-title">
+                        <div flex>
+                            <label><b>Destino</b></label>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-content class="cont-form">
+                    <div layout="row" class="label-datos-1">
+                        <div flex>
+                            <label><b>Destino:</b></label>
+                        </div>
+                    </div>
+                    <div layout="row" class="label-datos-2">
+                        <div flex>
+                            <label>{{ celularDestino }}</label>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-content class="cont-form">
+                    <div layout="row" class="label-datos-1">
+                        <div flex>
+                            <label><b>Origen:</b></label>
+                        </div>
+                    </div>
+                    <div layout="row" class="label-datos-2">
+                        <div flex>
+                            <label>{{ nombreCuentaOrigen | slice:-4 }}</label>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-content class="cont-form">
+                    <div layout="row" class="label-datos-1">
+                        <div flex>
+                            <label><b>Tipo de Cuenta:</b></label>
+                        </div>
+                    </div>
+                    <div layout="row" class="label-datos-2">
+                        <div flex><label>{{cuentaOrigen.tipocuenta}}</label></div>
+                    </div>
+                </mat-card-content>
+                <!-- <mat-card-content class="cont-form-date">
+                    <div layout="row" class="label-datos-title">
+                        <div flex><label><b>Destino</b></label></div>
+                    </div>
+                </mat-card-content> -->
+
+                <mat-card-content class="cont-form">
+                    <div layout="row" class="label-datos-1">
+                        <div flex>
+                            <label><b>Monto:</b></label>
+                        </div>
+                    </div>
+                    <div layout="row" class="label-datos-2">
+                        <div flex>
+                            <label>{{ cantidad | currency }}</label>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-content class="cont-form">
+                    <div layout="row" class="label-datos-1">
+                        <div flex>
+                            <label><b>Moneda:</b></label>
+                        </div>
+                    </div>
+                    <div layout="row" class="label-datos-2">
+                        <div flex>
+                            <label>{{ curAmount }}</label>
+                        </div>
+                    </div>
+                </mat-card-content>
+
+                <mat-card-content class="cont-form" *ngIf="idTransaccion">
+                    <div layout="row" class="label-datos-1">
+                        <div flex>
+                            <label><b>Id transaccion</b></label>
+                        </div>
+                    </div>
+                    <div layout="row" class="label-datos-2">
+                        <div flex>
+                            <label>{{ idTransaccion }}</label>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </form>
+            <br>
+            <div class="container-login100-form-btn" *ngIf="!idTransaccion">
+                <div class="wrap-login100-form-btn">
+                    <div class="login100-form-bgbtn"></div>
+                    <button class="login100-form-btn" (click)="nacegacion()">Siguiente</button>
+                </div>
+            </div>
+            <div class="container-login100-form-btn" *ngIf="idTransaccion">
+                <div class="wrap-login100-form-btn">
+                    <div class="login100-form-bgbtn"></div>
+                    <button class="login100-form-btn" (click)="autorizacionTX()">Regresar al comercion</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
