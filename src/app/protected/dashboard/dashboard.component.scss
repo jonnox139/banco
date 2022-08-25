@@ -68,24 +68,63 @@ ul {
 .mat-card-content div div {
     margin: 0;
 }*/
-@media screen and (min-width:767px) {
-
-    ul {
-        -webkit-column-count: 3;
-        -webkit-column-gap: 20px;
-        -moz-column-count: 3;
-        -moz-column-gap: 20px;
-        column-count: 3;
-        column-gap: 20px;
-      }
-      
+@media screen and (min-width: 767px) {
+  ul {
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
+  }
 }
 
 .cont-form-title {
-    width: 100%;
-    color: #031477;
+  width: 100%;
+  color: #031477;
+}
+.cont-form {
+  text-align: center;
+  color: #031477;
+}
+
+.container-login100,
+.limiter {
+  margin: 0 !important;
+}
+
+.title {
+  color: white !important;
+}
+
+.container-login100-dashboard {
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .mat-checkbox-custom label {
+    display: block !important;
   }
-  .cont-form {
-    text-align:center;
-    color: #031477;
+  mat-card-title.mat-card-title.cont-form-title,
+  b,
+  mat-checkbox {
+    margin: 0 !important;
   }
+  mat-checkbox {
+    ::ng-deep label {
+      display: block;
+    }
+  }
+  ul,
+  li {
+    margin: 0 !important;
+  }
+}
