@@ -10,14 +10,15 @@ import { AuthorizeConsentComponent } from './authorize-consent/authorize-consent
 import { PopUpAuthorizeAccessComponent } from './pop-up-authorize-access/pop-up-authorize-access.component';
 import { AccountListComponent } from './account-list/account-list.component';
 import { ApprovedTransactionComponent } from './approved-transaction/approved-transaction.component';
-
+import { TransactionInformationComponent } from './transaction-information/transaction-information';
 @NgModule({
   declarations: [
     DashboardComponent,
     AuthorizeConsentComponent,
     PopUpAuthorizeAccessComponent,
     AccountListComponent,
-    ApprovedTransactionComponent
+    ApprovedTransactionComponent,
+    TransactionInformationComponent
   ],
   imports: [
     CommonModule,

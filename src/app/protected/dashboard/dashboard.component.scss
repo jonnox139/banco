@@ -68,6 +68,8 @@ ul {
 .mat-card-content div div {
     margin: 0;
 }*/
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
 @media screen and (min-width: 767px) {
   ul {
     -webkit-column-count: 3;
@@ -102,7 +104,6 @@ ul {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  padding: 15px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -110,21 +111,62 @@ ul {
 }
 
 @media screen and (max-width: 767px) {
-  .mat-checkbox-custom label {
-    display: block !important;
-  }
   mat-card-title.mat-card-title.cont-form-title,
   b,
   mat-checkbox {
     margin: 0 !important;
   }
-  mat-checkbox {
-    ::ng-deep label {
-      display: block;
-    }
-  }
   ul,
   li {
     margin: 0 !important;
   }
+}
+
+.logo-banka img {
+  max-width: 10rem;
+}
+
+.logo-banka {
+  text-align: center;
+}
+.logo-transfiya {
+  background-color: #002f87;
+  text-align: center;
+}
+
+.boton-logout {
+  background: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  
+  border-radius: .5rem;
+}
+.boton-logout mat-icon {
+  
+  line-height: 1.5;
+}
+.div-boton-logout {
+  position: relative;
+  height:100%;
+}
+
+mat-checkbox {
+  background: #edf2f7;
+  padding: 1rem;
+  margin: 0.5rem !important;
+  ::ng-deep .mat-checkbox-label {
+    display: flex;
+  }
+}
+
+@import "../../../assets/css/bootstrap-grid.min.css";
+
+.row {
+  margin:0 !important;
+}
+.container-selection {
+  margin-bottom: 2rem;
 }

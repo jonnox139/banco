@@ -1,107 +1,164 @@
 <div class="limiter">
-    <div class="container-login100" style="background-image: url('../../../../assets/images/bg-01.jpg')">
-        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-            <form class="login100-form" autocomplete="off">
-                <span class="login100-form-title p-b-49"> Información de Pago </span>
-
-                <mat-card-content class="cont-form-date">
-                    <div layout="row" class="label-datos-title">
-                        <div flex>
-                            <label><b>Destino</b></label>
-                        </div>
-                    </div>
-                </mat-card-content>
-                <mat-card-content class="cont-form">
-                    <div layout="row" class="label-datos-1">
-                        <div flex>
-                            <label><b>Destino:</b></label>
-                        </div>
-                    </div>
-                    <div layout="row" class="label-datos-2">
-                        <div flex>
-                            <label>{{ celularDestino }}</label>
-                        </div>
-                    </div>
-                </mat-card-content>
-                <mat-card-content class="cont-form">
-                    <div layout="row" class="label-datos-1">
-                        <div flex>
-                            <label><b>Origen:</b></label>
-                        </div>
-                    </div>
-                    <div layout="row" class="label-datos-2">
-                        <div flex>
-                            <label>{{ nombreCuentaOrigen | slice:-4 }}</label>
-                        </div>
-                    </div>
-                </mat-card-content>
-                <mat-card-content class="cont-form">
-                    <div layout="row" class="label-datos-1">
-                        <div flex>
-                            <label><b>Tipo de Cuenta:</b></label>
-                        </div>
-                    </div>
-                    <div layout="row" class="label-datos-2">
-                        <div flex><label>{{cuentaOrigen.tipocuenta}}</label></div>
-                    </div>
-                </mat-card-content>
-                <!-- <mat-card-content class="cont-form-date">
-                    <div layout="row" class="label-datos-title">
-                        <div flex><label><b>Destino</b></label></div>
-                    </div>
-                </mat-card-content> -->
-
-                <mat-card-content class="cont-form">
-                    <div layout="row" class="label-datos-1">
-                        <div flex>
-                            <label><b>Monto:</b></label>
-                        </div>
-                    </div>
-                    <div layout="row" class="label-datos-2">
-                        <div flex>
-                            <label>{{ cantidad | currency }}</label>
-                        </div>
-                    </div>
-                </mat-card-content>
-                <mat-card-content class="cont-form">
-                    <div layout="row" class="label-datos-1">
-                        <div flex>
-                            <label><b>Moneda:</b></label>
-                        </div>
-                    </div>
-                    <div layout="row" class="label-datos-2">
-                        <div flex>
-                            <label>{{ curAmount }}</label>
-                        </div>
-                    </div>
-                </mat-card-content>
-
-                <mat-card-content class="cont-form" *ngIf="idTransaccion">
-                    <div layout="row" class="label-datos-1">
-                        <div flex>
-                            <label><b>Id transaccion</b></label>
-                        </div>
-                    </div>
-                    <div layout="row" class="label-datos-2">
-                        <div flex>
-                            <label>{{ idTransaccion }}</label>
-                        </div>
-                    </div>
-                </mat-card-content>
-            </form>
-            <br>
-            <div class="container-login100-form-btn" *ngIf="!idTransaccion">
-                <div class="wrap-login100-form-btn">
-                    <div class="login100-form-bgbtn"></div>
-                    <button class="login100-form-btn" (click)="nacegacion()">Siguiente</button>
-                </div>
-            </div>
-            <div class="container-login100-form-btn" *ngIf="idTransaccion">
-                <div class="wrap-login100-form-btn">
-                    <div class="login100-form-bgbtn"></div>
-                    <button class="login100-form-btn" (click)="autorizacionTX()">Regresar al comercion</button>
-                </div>
-            </div>
+  <div class="container-login100">
+    <div class="row logo-transfiya">
+      <div class="col-1">
+        <div class="div-boton-logout">
+          <button
+            (click)="goToDashboard()"
+            class="material-button"
+            class="boton-logout"
+          >
+            <mat-icon
+              aria-hidden="false"
+              fontIcon="keyboard_arrow_left"
+              color="black"
+              >keyboard_arrow_left</mat-icon
+            >
+          </button>
         </div>
+      </div>
+      <div class="col-11">
+        <img src="/assets/images/logotransfiya.png" />
+      </div>
     </div>
+    <div class="wrap-login100 p-l-55 p-r-55 p-b-54">
+      <div class="logo-banka">
+        <img src="/assets/images/banka.png" />
+      </div>
+      <div class="label-datos-title texto-azul-50">
+        <div flex>
+          <label><b>Autorización de consentimiento</b></label>
+        </div>
+      </div>
+      <div class="alert">
+        <div class="row">
+          <div class="col-2">
+            <mat-icon
+              class="vertical-children"
+              style="color: rgba(16, 173, 255, 0.2)"
+              >info</mat-icon
+            >
+          </div>
+          <div class="col-10 text-alert">
+            Confirma que los datos del consentimiento que te presentamos son
+            correctos.
+          </div>
+        </div>
+      </div>
+
+      <form class="login100-form" autocomplete="off">
+        <mat-card-content class="cont-form-date">
+          <div layout="row" class="label-datos-title">
+            <div>
+              <label><mat-icon>account_box</mat-icon> <b>Cliente</b></label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Nombre:</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label>{{ user.name }}</label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>C.C:</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label>{{ user.email }}</label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form-date">
+          <div layout="row" class="label-datos-title">
+            <div>
+              <label><mat-icon>account_box</mat-icon> <b>Acceso</b></label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Recurrente:</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label>Sí</label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Frecuencia:</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label>Mensual</label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Vigente hasta:</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label>30/09/2022</label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Permiso:</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label
+                >Acceso a los fondos de la cuenta seleccionada para transferir
+                dinero a otras Entidades Financieras que tengan Transfiya.
+              </label>
+            </div>
+          </div>
+        </mat-card-content>
+      </form>
+      <mat-checkbox [(ngModel)]="acepto" color="primary">Acepto</mat-checkbox>
+      <br /><br />
+      <div class="container-login100-form-btn" *ngIf="!idTransaccion">
+        <div class="wrap-login100-form-btn">
+          <div class="login100-form-bgbtn"></div>
+          <button
+            class="login100-form-btn"
+            [disabled]="!acepto"
+            (click)="nacegacion()"
+          >
+            Siguiente
+          </button>
+        </div>
+      </div>
+      <div class="container-login100-form-btn" *ngIf="idTransaccion">
+        <div class="wrap-login100-form-btn">
+          <div class="login100-form-bgbtn"></div>
+          <button class="login100-form-btn" (click)="autorizacionTX()">
+            Regresar al comercion
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

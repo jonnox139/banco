@@ -12,13 +12,6 @@ import {
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  styles: [
-    `
-      * {
-        margin: 15px;
-      }
-    `,
-  ],
 })
 export class DashboardComponent implements OnInit {
   cuentas: any[] = this.usuario.accounts;

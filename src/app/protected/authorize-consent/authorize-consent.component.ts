@@ -22,22 +22,13 @@ export class AuthorizeConsentComponent implements OnInit {
     localStorage.getItem('transactionInformation') || '{}'
   );
   user = JSON.parse(localStorage.getItem('user') || '{}');
-  nombreCuentaOrigen: any = this.cuentaOrigen!.numerocuenta;
-  tipoDocumentoOrigen: any;
-  numDocumentoOrigen: any;
-  BancoOrigen: any;
-  nombreCuentaDestino: any;
-  tipoDocumentoDestino: any;
-  numDocumentoDestino: any;
-  BancoDestino: any;
-  cantidad: any;
   constructor(
     public AuthorizeConsent: AuthService,
     public dialog: MatDialog,
-    private router: Router,
-    private activatedRouter: ActivatedRoute
+    private router: Router
   ) {}
 
+  acepto: boolean = false;
   celularDestino: any;
   Handle: any;
   celularOrigen: any;
@@ -52,41 +43,15 @@ export class AuthorizeConsentComponent implements OnInit {
     return this.AuthorizeConsent.usuario;
   }
 
-  ngOnInit(): void {
-    this.cuentaOrigen.signerhandle 
-    const valores = window.location.href;
-    if (Object.keys(this.transactionData).length > 0) {
-      if (this.transactionData.transactionId) {
-        this.transactionId = this.transactionData.transactionId;
-      }
-      if (this.transactionData.curAmount) {
-        this.curAmount = this.transactionData.curAmount;
-      }
-      if (this.transactionData.destinationCellphone) {
-        this.celularDestino = this.transactionData.destinationCellphone;
-      }
-      if (this.transactionData.transactionCode) {
-        this.transactionCode = this.transactionData.transactionCode;
-      }
-      if (this.transactionData.amount) {
-        this.cantidad = this.transactionData.amount;
-      }
-      if (localStorage.getItem('tx_ref')){
-        this.idTransaccion = localStorage.getItem('tx_ref')
-      } 
-    }
+  ngOnInit(): void {}
+
+  nacegacion() {
+    this.router.navigate(['verification/transaction-information']);
   }
 
-  nacegacion(){
-    localStorage.setItem('signerhandle', this.cuentaOrigen.signerhandle );
-    localStorage.setItem('celularDestino', this.celularDestino );
-    localStorage.setItem('cantidad', this.cantidad );
-    this.router.navigate(['verification/authorize-access']);
-  }
+  autorizacionTX() {}
 
-  autorizacionTX(){
-    window.open("http://transfiya.com/mobile/bankOK?id=" + this.idTransaccion);
+  goToDashboard() {
+    this.router.navigateByUrl("/dashboard")
   }
-
-  
 }

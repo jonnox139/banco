@@ -4,8 +4,9 @@
   [formGroup]="miFormulario"
   (ngSubmit)="login()"
 >
-  <span class="login100-form-title p-b-49"> Banco Alfa </span>
-
+  <div class="logo-banka">
+    <img src="/assets/images/banka.png" />
+  </div>
   <div class="wrap-input100 m-b-23">
     <span class="label-input100">Usuario</span>
     <input
@@ -38,9 +39,12 @@
         type="submit"
         [disabled]="miFormulario.invalid"
       >
-        Login
+        Ingresar
       </button>
     </div>
+  </div>
+  <div class="container-forgot-password">
+    <a href="" class="forgot-password-anchor">¿Olvidaste tu contraseña?</a>
   </div>
 
   <!--  <div class="flex-col-c p-t-60">

@@ -3,9 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ValidarTokenGuard } from './guards/validar-token.guard';
 import { AuthorizeConsentComponent } from './protected/authorize-consent/authorize-consent.component';
+import { TransactionInformationComponent } from './protected/transaction-information/transaction-information';
 import { DashboardComponent } from './protected/dashboard/dashboard.component';
 import { PopUpAuthorizeAccessComponent } from './protected/pop-up-authorize-access/pop-up-authorize-access.component';
-import {ApprovedTransactionComponent} from "./protected/approved-transaction/approved-transaction.component";
+import { ApprovedTransactionComponent } from './protected/approved-transaction/approved-transaction.component';
 import { AccountListComponent } from './protected/account-list/account-list.component';
 
 const routes: Routes = [
@@ -37,7 +38,11 @@ const routes: Routes = [
       },
       {
         path: 'approved-transaction',
-        component: ApprovedTransactionComponent
+        component: ApprovedTransactionComponent,
+      },
+      {
+        path: 'transaction-information',
+        component: TransactionInformationComponent,
       },
     ],
   },

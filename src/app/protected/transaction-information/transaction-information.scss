@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+:host {
+  display: flex;
+  justify-content: center;
+}
 
 .mat-form-field {
   width: 100%;
@@ -52,6 +55,16 @@ mat-card-content {
   color: #031477;
 }
 
+.cont-form-info {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+
+.cont-form-info div {
+  padding: 0.5rem;
+}
+
 .label-datos-title {
   width: 80%;
 }
@@ -88,54 +101,21 @@ mat-card-content {
 .mat-card-content {
   margin-bottom: 16px;
 }
-.boton-logout {
-  background: white;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 
-  border-radius: 0.5rem;
-}
-.boton-logout mat-icon {
-  
-    line-height: 1.5;
-  }
-.div-boton-logout {
-  position: relative;
-  height: 100%;
-}
-@import "../../../assets/css/bootstrap-grid.min.css";
-
-.logo-banka img {
-  max-width: 10rem;
+.title-comprobante {
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
-.logo-banka {
-  text-align: center;
-}
-
-.texto-azul-50 {
-  width: 50%;
+.envio-realizado-container {
+  color: #ffb71b;
   text-align: left;
-  color: #031477;
 }
 
-.alert {
-  background: #ecf8ff;
-  margin: 1rem 0;
-  position: relative;
-  height: 100%;
-  padding:.4rem;
-}
-
-.divider {
-    
+.span {
   position: relative;
   height: 100%;
 }
-
 .vertical-children {
   margin: 0;
   position: absolute;
@@ -145,15 +125,34 @@ mat-card-content {
   padding: 0.2rem;
 }
 
+@import "../../../assets/css/bootstrap-grid.min.css";
+
 .row {
-    margin:0 !important;
-}
-.text-alert {
-  color: #10adff;
+  margin: 0 !important;
 }
 
+.div-boton-logout {
+  position: relative;
+  height: 100%;
+}
 
-.col-105{
-    flex: 0 0 90.666667%;
-    max-width: 90.666667%;
+.div-boton-logout button {
+  background: #002f87;
+  color: white;
+}
+
+.icon {
+    font-size:35px;
+    width:35px;
+    height: 35px;
+    margin: 0 0.7rem;
+    color: #002F87;
+}
+
+.div-boton-logout button mat-icon {
+  line-height: 1.5;
+}
+.header {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
 }

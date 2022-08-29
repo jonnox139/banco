@@ -1,0 +1,145 @@
+<div class="limiter">
+  <div class="row header">
+    <div class="col-1">
+      <div class="div-boton-logout">
+        <button
+          (click)="goToDashboard()"
+          class="material-button"
+          class="boton-logout"
+        >
+          <mat-icon
+            aria-hidden="false"
+            fontIcon="keyboard_arrow_left"
+            color="black"
+            >keyboard_arrow_left</mat-icon
+          >
+        </button>
+      </div>
+    </div>
+    <div class="col-7">
+    </div>
+    <div class="col-4" style="text-align: right;">
+        <mat-icon aria-hidden="false" class="icon" fontIcon="share" color="black"
+          >share</mat-icon
+        >
+        <mat-icon aria-hidden="false" class="icon" fontIcon="cloud_download" color="black"
+          >cloud_download</mat-icon
+        >
+      </div>
+  </div>
+  <div class="container-login100">
+    <div class="wrap-login100 p-l-55 p-r-55 p-b-54">
+      <form class="login100-form" autocomplete="off" style="text-align: center">
+        <div class="p-b-54">
+          <span class="title-comprobante cont-form"> Comprobante </span>
+        </div>
+        <div class="envio-realizado-container">
+          <span
+            ><mat-icon aria-hidden="false">check_circle_outline</mat-icon> Envío
+            realizado</span
+          >
+        </div>
+        <br />
+        <mat-card-content class="cont-form-info">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Para</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-2">
+            <div flex>
+              <label>Aleja Guzmán<br />315 788 4561</label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form-info">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Banco destino</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-2">
+            <div flex>
+              <label>Banki</label>
+            </div>
+          </div>
+        </mat-card-content>
+        <!-- <mat-card-content class="cont-form-date">
+                    <div layout="row" class="label-datos-title">
+                        <div flex><label><b>Destino</b></label></div>
+                    </div>
+                </mat-card-content> -->
+
+        <mat-card-content class="cont-form-info">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Monto</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-2">
+            <div flex>
+              <label>$ 40.000</label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form-info">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Asunto</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-2">
+            <div flex>
+              <label>Almuerzo</label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form-info">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Fecha y hora</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-2">
+            <div flex>
+              <label>22/03/2022 - 10:45 AM</label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form-info">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Banco origen</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-2">
+            <div flex>
+              <label>Mi Banco</label>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="cont-form-info" *ngIf="idTransaccion">
+          <div layout="row" class="label-datos-1">
+            <div flex>
+              <label><b>Id transaccion</b></label>
+            </div>
+          </div>
+          <div layout="row" class="label-datos-2">
+            <div flex>
+              <label>{{ idTransaccion }}</label>
+            </div>
+          </div>
+        </mat-card-content>
+      </form>
+      <br />
+      <div class="container-login100-form-btn" *ngIf="idTransaccion">
+        <div class="wrap-login100-form-btn">
+          <div class="login100-form-bgbtn"></div>
+          <button class="login100-form-btn" (click)="autorizacionTX()">
+            Regresar al comercion
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
